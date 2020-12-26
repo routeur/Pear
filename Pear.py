@@ -5,8 +5,6 @@ from rich.console import Console
 from rich.table import Column, Table
 from rich.prompt import Prompt
 
-console = Console()
-
 def pdb_base_info_ASN (ASN):
     url = f'https://peeringdb.com/api/net?asn={ASN}'
     resp = requests.get(url)
@@ -121,7 +119,7 @@ def verification_NET_or_FAC(org_as_id):
     if pdb_liste_fac_set_org == []:
         verdict = False
     else:
-        ()
+        pass
 
     return verdict
 
@@ -226,69 +224,77 @@ def initialisation_de_la_table_CAIDA_ASgathering_2(couleur):
 
     return table_CAIDA_AS_2
 
-ASN = Prompt.ask("Entrez un numéro d'ASN", default="exemple : 174")
 
+if __name__ == "__main__":
+    console = Console()
 
-pdb_base = pdb_base_info_ASN(ASN)
-other = pdb_other_infos(pdb_base[0])
-network_facilities = pdbsearch_network_facilities(pdb_base[0])
-by_asn = caida_search_by_asn(ASN)
-org_gathering = caida_organisation_gathering(by_asn[1])
-other_info_pdb = pdb_other_infos(pdb_base[0])
-net_org_gathering = pdbsearch_network_NET(pdb_base[0])
+    ASN = Prompt.ask("Entrez un numéro d'ASN", default="exemple : 174")
 
-verification = verification_NET_or_FAC(pdb_base[0])
-if verification == True:
-    table_fac = initialisation_de_la_table_FAC("bold green")
-    nsporinfra = "NETWORK FACILITIES"
-else:
-    table_net_1 = initialisation_de_la_table_NET_1("bold green")
-    table_net_2 = initialisation_de_la_table_NET_2("bold green")
-    nsporinfra = "NETWORK SERVICE PROVIDER"
+    pdb_base = pdb_base_info_ASN(ASN)
+    other = pdb_other_infos(pdb_base[0])
+    network_facilities = pdbsearch_network_facilities(pdb_base[0])
+    by_asn = caida_search_by_asn(ASN)
+    org_gathering = caida_organisation_gathering(by_asn[1])
+    other_info_pdb = pdb_other_infos(pdb_base[0])
+    net_org_gathering = pdbsearch_network_NET(pdb_base[0])
 
+    verification = verification_NET_or_FAC(pdb_base[0])
+    if verification == True:
+        table_fac = initialisation_de_la_table_FAC("bold green")
+        nsporinfra = "NETWORK FACILITIES"
+    else:
+        table_net_1 = initialisation_de_la_table_NET_1("bold green")
+        table_net_2 = initialisation_de_la_table_NET_2("bold green")
+        nsporinfra = "NETWORK SERVICE PROVIDER"
 
-table_CAIDA_ORG = initialisation_de_la_table_CAIDA_orgathering("#E6A52C")
-table_CAIDA_AS_1 = initialisation_de_la_table_CAIDA_ASgathering_1("#29A081")
-table_CAIDA_AS_2 = initialisation_de_la_table_CAIDA_ASgathering_2("#29A081")
+    table_CAIDA_ORG = initialisation_de_la_table_CAIDA_orgathering("#E6A52C")
+    table_CAIDA_AS_1 = initialisation_de_la_table_CAIDA_ASgathering_1("#29A081")
+    table_CAIDA_AS_2 = initialisation_de_la_table_CAIDA_ASgathering_2("#29A081")
 
-accent = ("'")
+    accent = ("'")
 
-console.print("MADE BY [bold red]R0uteur / https://github.com/routeur[/bold red]")
-print("")
-if nsporinfra == "NETWORK FACILITIES" :
-    for i in range (0, len(network_facilities)) :
-        table_fac.add_row(
-            f'{network_facilities[0][i]}', f'{network_facilities[1][i]}', f'{network_facilities[2][i]}', f'{network_facilities[3][i]}', f'{network_facilities[4][i]}'
-            )
-else:
-    for j in range (0, len(net_org_gathering[0])) :
-        table_net_1.add_row(
+    console.print("MADE BY [bold red]R0uteur / https://github.com/routeur[/bold red]")
+    print("")
+
+    if nsporinfra == "NETWORK FACILITIES" :
+        for i in range (0, len(network_facilities)) :
+            table_fac.add_row(
+                f'{network_facilities[0][i]}', f'{network_facilities[1][i]}', f'{network_facilities[2][i]}', f'{network_facilities[3][i]}', f'{network_facilities[4][i]}'
+                )
+    else:
+        for j in range (0, len(net_org_gathering[0])) :
+            table_net_1.add_row(
                 f'{net_org_gathering[0][j]}', f'{net_org_gathering[1][j]}', f'{net_org_gathering[2][j]}', f'{net_org_gathering[3][j]}', f'{net_org_gathering[4][j]}', f'{net_org_gathering[5][j]}', f'{net_org_gathering[6][j]}'
                 )
-        table_net_2.add_row(
+            table_net_2.add_row(
                 f'{net_org_gathering[7][j]}', f'{net_org_gathering[8][j]}', f'{net_org_gathering[9][j]}', f'{net_org_gathering[10][j]}', f'{net_org_gathering[11][j]}'
                 )
 
-table_CAIDA_ORG.add_row(
-    f'{org_gathering[0]}', f'{org_gathering[1]}', f'{org_gathering[2]}', f'{org_gathering[3]}', f'{org_gathering[4]}',f'{org_gathering[5]}'
-    )
-table_CAIDA_AS_1.add_row(
-    f'{org_gathering[0]}', f'{by_asn[0]}', f'{by_asn[1]}', f'{by_asn[2]}', f'{by_asn[3]}',f'{by_asn[4]}',f'{by_asn[5]}'
-    )
-table_CAIDA_AS_2.add_row(
-    f'{by_asn[6]}', f'{by_asn[7]}', f'{by_asn[8]}', f'{by_asn[9]}'
-    )
+    table_CAIDA_ORG.add_row(
+        f'{org_gathering[0]}', f'{org_gathering[1]}', f'{org_gathering[2]}', f'{org_gathering[3]}', f'{org_gathering[4]}',f'{org_gathering[5]}'
+        )
+    table_CAIDA_AS_1.add_row(
+        f'{org_gathering[0]}', f'{by_asn[0]}', f'{by_asn[1]}', f'{by_asn[2]}', f'{by_asn[3]}',f'{by_asn[4]}',f'{by_asn[5]}'
+        )
+    table_CAIDA_AS_2.add_row(
+        f'{by_asn[6]}', f'{by_asn[7]}', f'{by_asn[8]}', f'{by_asn[9]}'
+        )
 
-console.print(f'                                                         [bold magenta] {nsporinfra} [/bold magenta]')
-if nsporinfra == "NETWORK FACILITIES" :
-    console.print(table_fac)
-else:
-    console.print(table_net_1)
-    console.print(table_net_2)
-console.print("                                                         [bold magenta] PEERING DB RESULTS [/bold magenta]")
-console.print(table_CAIDA_ORG)
-console.print("                                                         [bold magenta] CAIDA RESULTS [/bold magenta]")
-console.print(table_CAIDA_AS_1)
-console.print(table_CAIDA_AS_2)
+    console.print(f'                                                         [bold magenta] {nsporinfra} [/bold magenta]')
 
-console.print(f' \n[bold blue]ID de l{accent}organisation : {pdb_base[0]};              crée le : {other_info_pdb[0]} ;\n ID de l{accent}AS : {pdb_base[1]};                       update le : {other_info_pdb[1]} ; \n Region du scope : {pdb_base[2]};               site : {other_info_pdb[2]}; \n Type de réseau : {pdb_base[3]} ; \n Niveau de trafic : {pdb_base[4]}; \n Direction du trafic : {pdb_base[5]};[/bold blue]')
+    if nsporinfra == "NETWORK FACILITIES" :
+        console.print(table_fac)
+    else:
+        console.print(table_net_1)
+        console.print(table_net_2)
+
+    console.print("                                                         [bold magenta] PEERING DB RESULTS [/bold magenta]")
+    console.print(table_CAIDA_ORG)
+    console.print("                                                         [bold magenta] CAIDA RESULTS [/bold magenta]")
+    console.print(table_CAIDA_AS_1)
+    console.print(table_CAIDA_AS_2)
+
+    console.print(f' \n[bold blue]ID de l{accent}organisation : {pdb_base[0]};              crée le : {other_info_pdb[0]} ;\n ID de l{accent}AS : {pdb_base[1]};                       update le : {other_info_pdb[1]} ; \n Region du scope : {pdb_base[2]};               site : {other_info_pdb[2]}; \n Type de réseau : {pdb_base[3]} ; \n Niveau de trafic : {pdb_base[4]}; \n Direction du trafic : {pdb_base[5]};[/bold blue]')
+
+
+        
