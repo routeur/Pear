@@ -299,8 +299,3 @@ if __name__ == "__main__":
         console.print("                                                         [bold magenta] CAIDA RESULTS [/bold magenta]")
         console.print(table_CAIDA_AS_1)
         console.print(table_CAIDA_AS_2)
-
-        console.print(f' \n[bold blue]ID de l{accent}organisation : {pdb_base[0]};              crée le : {other_info_pdb[0]} ;\n ID de l{accent}AS : {pdb_base[1]};                       update le : {other_info_pdb[1]} ; \n Region du scope : {pdb_base[2]};               site : {other_info_pdb[2]}; \n Type de réseau : {pdb_base[3]} ; \n Niveau de trafic : {pdb_base[4]}; \n Direction du trafic : {pdb_base[5]};[/bold blue]')
-
-
-        
