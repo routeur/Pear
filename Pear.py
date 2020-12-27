@@ -250,11 +250,11 @@ if __name__ == "__main__":
         verification = verification_NET_or_FAC(pdb_base[0])
         if verification == True:
             table_fac = initialisation_de_la_table_FAC("bold green")
-            nsporinfra = """POINTS D'ECHANGE"""
+            nsporinfra = "IX / EXCHANGE POINT"
         else:
             table_net_1 = initialisation_de_la_table_NET_1("bold green")
             table_net_2 = initialisation_de_la_table_NET_2("bold green")
-            nsporinfra = "NETWORK SERVICE PROVIDER"
+            nsporinfra = "ORGANISATION"
 
         table_CAIDA_ORG = initialisation_de_la_table_CAIDA_orgathering("#E6A52C")
         table_CAIDA_AS_1 = initialisation_de_la_table_CAIDA_ASgathering_1("#29A081")
@@ -262,7 +262,7 @@ if __name__ == "__main__":
 
         accent = ("'")
 
-        if nsporinfra == "NETWORK FACILITIES" :
+        if nsporinfra == "IX / EXCHANGE POINT" :
             for i in range (0, len(network_facilities)) :
                 table_fac.add_row(
                     f'{network_facilities[0][i]}', f'{network_facilities[1][i]}', f'{network_facilities[2][i]}', f'{network_facilities[3][i]}', f'{network_facilities[4][i]}'
@@ -288,7 +288,7 @@ if __name__ == "__main__":
 
         console.print(f'                                                         [bold magenta] {nsporinfra} [/bold magenta]')
 
-        if nsporinfra == "NETWORK FACILITIES" :
+        if nsporinfra == "IX / EXCHANGE POINT" :
             console.print(table_fac)
         else:
             console.print(table_net_1)
