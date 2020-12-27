@@ -250,7 +250,7 @@ if __name__ == "__main__":
         verification = verification_NET_or_FAC(pdb_base[0])
         if verification == True:
             table_fac = initialisation_de_la_table_FAC("bold green")
-            nsporinfra = "NETWORK FACILITIES"
+            nsporinfra = """POINTS D'ECHANGE"""
         else:
             table_net_1 = initialisation_de_la_table_NET_1("bold green")
             table_net_2 = initialisation_de_la_table_NET_2("bold green")
