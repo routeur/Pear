@@ -1,4 +1,4 @@
-#  :pear: Pear
+#  :pear: Pear (Documentation en cours)
 ***:fr: Pear est un outil qui permet de recuperer des informations sur une AS.***  
 *:us: Pear is a script for gathering info from an ASNumber.
 
