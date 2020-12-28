@@ -2,8 +2,12 @@
 ***:fr: Pear est un outil qui permet de recuperer des informations sur une AS.***  
 *:us: Pear is a script for gathering info from an ASNumber.
 
-***:fr: Comment l'installer ?***
-*:us: How to download it ?
+
+![image](https://user-images.githubusercontent.com/49996859/103186885-8a88ab80-48c2-11eb-8b64-0b043c40462e.png)
+
+
+***:fr: Comment l'installer ?***  
+:us: How to download it ?
 
 via github :
 
@@ -17,11 +21,10 @@ And :
 
 ```pip install -r requirement.txt```
 
+:fr: **Comment le faire run ?**  
 :us: **How to run it ?**  
-:fr: **Comment le faire run ?**
 
 ```python3 Pear.py```
-
 
 # :open_book:	DOCUMENTATION
 
@@ -46,13 +49,13 @@ Peeringdb is a non-profit organisation and maintained by volunteers.
 
 
 #### :fr: MOTS CLÉS :  
-*#### :us: KEYWORDS :
+#### :us: KEYWORDS :
 
 :fr: Network facilities:
-> Network Facilities inclus tout ce qui est lié à l'infrastructure réseeau (inclus les cables, conduits, switches et autres équipements) ainsi que les Centres Opérations de >réseau terrains et batiments associés
+>Network Facilities inclus tout ce qui est lié à l'infrastructure réseeau (inclus les cables, conduits, switches et autres équipements) ainsi que les Centres Opérations de réseau terrains et batiments associés
 
-*:us: Network facilities:
-*>Network Facilities means all material network facilities (including cables, wires, conduits, switches etc..) and related material operating support systems, network operations *centers land and buildings associated therewith
+:us: Network facilities:
+>Network Facilities means all material network facilities (including cables, wires, conduits, switches etc..) and related material operating support systems, network operations centers land and buildings associated therewith
 
 :fr: NET COUNT
 >Nombres de réseaux présent dans cette Facilitie  
@@ -62,46 +65,50 @@ Peeringdb is a non-profit organisation and maintained by volunteers.
 
 :fr: IRR
 >Reference à un AS-SET ou ROUTE-SET d'un Internet Routing Registry  
-*Le Registre du Routage Internet (Internet Routing Registry ou IRR) décrit les enregistrements maintenus
-*par de nombreuses organisations réseaux nationales ou internationales
+Le Registre du Routage Internet (Internet Routing Registry ou IRR) décrit les enregistrements maintenus
+par de nombreuses organisations réseaux nationales ou internationales
 
 :us: IRR
 >Reference to an AS-SET or ROUTE-SET in Internet Routing Registry
-*The IRR (Internet Routing Registry ou IRR) describe the records maintained by national or international network organizations
+The IRR (Internet Routing Registry ou IRR) describe the records maintained by national or international network organizations
 
-:fr:
+:fr: DEGREE  
+>Un DEGREE est le nombre de neighbors que possède un node ou un AS
+Il y a plusieurs types de DEGREE : global, out, and transit.
+***-Entre autre, un global DEGREE est un DEGREE standard dans lequel tout les AS neighbors sont comptés***
+-Out et transit DEGREE, toutefois, changent en fonction des chemins observés.
+Par exemple, **l'out DEGREE compte uniquement les neighbors qui suivent le chemin de l'AS** et le **transit degree compte uniquement les neighbor qui sont trouvés sur le chemin de l'AS entre ce dernier ainsi que ses neighbor.**
+Vous pouvez voir ce lien pour plus de details (https://asrank.caida.org/about#rank)
 
 :us: DEGREE  
->Degree is the number of neighbors that a node an AS has.  
+>Degree is the number of neighbors that a node, AS has.  
 There are various types of degrees: global, out, and transit:  
--Specifically, a global degree is a standard degree in which all of an AS's neighbors are counted  
+***-Specifically, a global degree is a standard degree in which all of an AS's neighbors are counted***  
 -Out and transit degrees, however, change based on the observed paths.  
 For example, **out degree only counts neighbors that follow the AS in the path** and **transit degree only counts neighbors that are found in at least one path where the AS is in between that neighbor and another neighbor of the AS.**
 see this link for more details (https://asrank.caida.org/about#rank)
 
+:fr: DEGREE CUSTOMER
+>Un customer achete du transit à un AS
+Peer to peer c'est un accord de peering entre les deux isp
+Le customer à une relation de lien de montant à descendant 
+
 :us: DEGREE CUSTOMER
->ASes tend to have smaller degrees than their providers, 
+>A customer buy some transit to a specific AS 
+Peer to peer is an agreement between two ISP's
+The customer have a uplink to downlink relationship
 
+:fr: ASN DEGREE TOTAL  
+Total des ASN DEGREE
 
+:en: ASN DEGREE TOTAL  
+Total of ASN DEGREES
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+:fr: reste à documenter :
+*** les cones , AS rank de CAIDA ***
+  
+  
+  
+  
+  
 (it may contain some bugs)
