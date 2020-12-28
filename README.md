@@ -2,14 +2,14 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ***:fr: Pear est un script qui permet de recuperer des informations sur une AS.***  
-:us: Pear is a script for gathering info from an ASNumber.
+:us: **Pear is a script for gathering info from an ASNumber.**
 
 
 ![image](https://user-images.githubusercontent.com/49996859/103186885-8a88ab80-48c2-11eb-8b64-0b043c40462e.png)
 
   
 ***:fr: Comment l'installer ?***  
-:us: How to download it ?
+:us: **How to download it ?**
 
 via github :
 
@@ -23,7 +23,7 @@ And :
 
 ```pip install -r requirement.txt```
 
-:fr: **Comment le faire run ?**  
+:fr: ***Comment le faire run ?***  
 :us: **How to run it ?**  
 
 ```python3 Pear.py```
@@ -44,7 +44,7 @@ An AS engage thmeself to some peering agreement, although most interconnection p
 >Peeringdb à été crée pour faciliter le peering entre les réseaux ainsi qu'entre les coordonnateurs de peering mais pas que, dans la base de donnée de peeringdb on peux retrouver des données d'interconnexions sur les réseaux , clouds , services et entreprises.
 Peeringdb est une organisation à but non lucrative et gerée par des benevoles.
 
-*:us: **What is peeringdb ? :**  
+:us: **What is peeringdb ? :**  
 >PeeringDB was set up to facilitate peering between networks and peering coordinators and that includes all types of interconnection data for networks, clouds, services, and enterprise, as well as interconnection facilities.
 Peeringdb is a non-profit organisation and maintained by volunteers.  
 
