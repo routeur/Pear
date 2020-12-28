@@ -1,0 +1,14 @@
+sources :
+
+https://www.lawinsider.com/dictionary/network-facilities
+https://asrank.caida.org/about#cone
+https://peeringdb.com/about
+https://www.apnic.net/about-apnic/whois_search/about/what-is-in-whois/irr/
+https://www.ripe.net/manage-ips-and-asns/db/support/documentation/ripe-database-documentation/rpsl-object-types/4-2-descriptions-of-primary-objects/4-2-7-description-of-the-as-set-object
+https://www.apnic.net/manage-ip/using-whois/guide/route-set/
+https://nsrc.org/sites/default/files/archives/admin-guide/nsrcfr.pdf
+https://www.researchgate.net/figure/Transit-degree-computed-by-using-AS-paths-The-node-degrees-of-A-and-B-are-both-3-B-has_fig1_290995765
+http://www.pam2010.ethz.ch/papers/full-length/11.pdf
+https://en.wikipedia.org/wiki/Tier_1_network
+https://lafibre.info/peering/peering-transit/
+https://www.netsh.be/de-lipv6-propre-via-son-propre-as-et-ses-ip-demander-un-numero-das/
