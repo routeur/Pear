@@ -5,7 +5,7 @@
 :us: **Pear is a script for gathering info from an ASNumber.**
 
 
-![image](https://user-images.githubusercontent.com/49996859/103186885-8a88ab80-48c2-11eb-8b64-0b043c40462e.png)
+![image](https://user-images.githubusercontent.com/49996859/103335830-9321e300-4a76-11eb-924d-6e3a0fc226fd.png)
 
   
 ***:fr: Comment l'installer ?***  
@@ -118,12 +118,9 @@ The customer have a uplink to downlink relationship
 :fr: CONE  
 >traduction à venir.. cependant vous pouvez vous renseigner sur ce lien : https://asrank.caida.org/about#customer-cone  
 
-:us CONE  
+:us: CONE  
 >translation incoming.. but you still can check this link : https://asrank.caida.org/about#customer-cone  
   
-  
->related project : Epic_stamina (coming soon)
-  
-  
+    
 >If you want to suggest something about the code or the documentation feel free to tell me :)
 
