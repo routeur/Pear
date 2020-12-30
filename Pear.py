@@ -9,7 +9,7 @@ def pdb_base_info_ASN (ASN):
     url = f'https://peeringdb.com/api/net?asn={ASN}'
     resp = requests.get(url)
     pdb_json_as = json.loads(resp.text)
-    #check if it's doesn't work :
+    #check if it doesn't work :
     if('error' in pdb_json_as['meta']):
         return pdb_json_as['meta']['error']
     id_as = (pdb_json_as['data'][0]['id'])
