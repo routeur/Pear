@@ -1,4 +1,4 @@
-#  :pear: Pear (Documentation en cours)
+#  :pear: Pear
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ***:fr: Pear est un script qui permet de recuperer des informations sur une AS.***  
@@ -26,18 +26,23 @@ And :
 :fr: ***Comment le faire run ?***  
 :us: **How to run it ?**  
 
-```python3 Pear.py```
+```python3 Pear.py -a [ASNumber]```
+  
+Getting help :  
+  
+```python3 Pear.py -h```
 
+  
 # :open_book:	DOCUMENTATION
 
 #### INTRODUCTION
 
 :fr: **Qu'est ce qu'un ASN ?**  
->Un Autonomous System (AS), ou système autonome, est un ensemble de réseaux informatiques IP intégrés à Internet et dont la politique de routage interne est cohérente. Un AS est généralement sous le contrôle d'une entité ou organisation unique. (wikipedia)
+>Un Autonomous System (AS), ou système autonome, est un ensemble de réseaux informatiques IP intégrés à Internet et dont la politique de routage interne est cohérente. Un AS est généralement sous le contrôle d'une entité ou organisation unique. (wikipedia)  
 Un AS s'engage generalement dans des accords de peering, la plus part des accords d'interconnexion sont tennus secrets mais certainnes de ces informations peuvent être déduites par des dérivés de traceroute et des dataset de topologie BGP.
 
 :us: **What is an ASN ?**
->An autonomous system (AS) is a collection of connected Internet Protocol (IP) routing prefixes under the control of one or more network operators on behalf of a single administrative entity or domain that presents a common, clearly defined routing policy to the internet (wikipedia)
+>An autonomous system (AS) is a collection of connected Internet Protocol (IP) routing prefixes under the control of one or more network operators on behalf of a single administrative entity or domain that presents a common, clearly defined routing policy to the internet (wikipedia)  
 An AS engage thmeself to some peering agreement, although most interconnection peering agreements between networks are secret but some information can be inferred from traceroute-derived and BGP-derived Internet topology data sets.
 
 :fr: **Qu'est ce que peeringdb ? :**  
@@ -99,15 +104,26 @@ Peer to peer is an agreement between two ISP's
 The customer have a uplink to downlink relationship
 
 :fr: ASN DEGREE TOTAL  
-Total des ASN DEGREE
+>Total des ASN DEGREE
 
 :us: ASN DEGREE TOTAL  
-Total of ASN DEGREES
+>Total of ASN DEGREES
 
-:fr: reste à documenter :
-***les cones , AS rank de CAIDA***
-  
+:us: AS rank of CAIDA
+>the AS rank is determined by the size of the AS and the degree of their cones
 
-related project : Epic_stamina (coming soon)
+:fr: AS rank de CAIDA
+>l'AS rank de CAIDA est determiné par la taille de l'AS et le degré de leurs cones
+
+:fr: CONE  
+>traduction à venir.. cependant vous pouvez vous renseigner sur ce lien : https://asrank.caida.org/about#customer-cone  
+
+:us CONE  
+>translation incoming.. but you still can check this link : https://asrank.caida.org/about#customer-cone  
   
-(it may contain some bugs)
+  
+>related project : Epic_stamina (coming soon)
+  
+  
+>If you want to suggest something about the code or the documentation feel free to tell me :)
+
