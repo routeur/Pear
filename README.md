@@ -78,19 +78,19 @@ par de nombreuses organisations réseaux nationales ou internationales
 The IRR (Internet Routing Registry ou IRR) describe the records maintained by national or international network organizations
 
 :fr: DEGREE  
->Un DEGREE est le nombre de neighbors que possède un node ou un AS
-Il y a plusieurs types de DEGREE : global, out, and transit.
-***-Entre autre, un global DEGREE est un DEGREE standard dans lequel tout les AS neighbors sont comptés***
--Out et transit DEGREE, toutefois, changent en fonction des chemins observés.
-Par exemple, **l'out DEGREE compte uniquement les neighbors qui suivent le chemin de l'AS** et le **transit degree compte uniquement les neighbor qui sont trouvés sur le chemin de l'AS entre ce dernier ainsi que ses neighbor.**
-Vous pouvez voir ce lien pour plus de details (https://asrank.caida.org/about#rank)
+>Un DEGREE est le nombre de neighbors que possède un node ou un AS.   
+Il y a plusieurs types de DEGREE : global, out, and transit.  
+***-Entre autre, un global DEGREE est un DEGREE standard dans lequel tout les AS neighbors sont comptés***  
+-Out et transit DEGREE, toutefois, changent en fonction des chemins observés.  
+Par exemple, **l'out DEGREE compte uniquement les neighbors qui suivent le chemin de l'AS** et le **transit degree compte uniquement les neighbor qui sont trouvés sur le chemin de l'AS entre ce dernier ainsi que ses neighbor.**  
+Vous pouvez voir ce lien pour plus de details (https://asrank.caida.org/about#rank)  
 
 :us: DEGREE  
 >Degree is the number of neighbors that a node, AS has.  
 There are various types of degrees: global, out, and transit:  
 ***-Specifically, a global degree is a standard degree in which all of an AS's neighbors are counted***  
 -Out and transit degrees, however, change based on the observed paths.  
-For example, **out degree only counts neighbors that follow the AS in the path** and **transit degree only counts neighbors that are found in at least one path where the AS is in between that neighbor and another neighbor of the AS.**
+For example, **out degree only counts neighbors that follow the AS in the path** and **transit degree only counts neighbors that are found in at least one path where the AS is in between that neighbor and another neighbor of the AS.**  
 see this link for more details (https://asrank.caida.org/about#rank)
 
 :fr: DEGREE CUSTOMER
