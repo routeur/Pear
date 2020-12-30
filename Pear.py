@@ -1,6 +1,4 @@
-import requests
-import socket
-import json
+import requests, socket, json, argparse
 from rich.console import Console
 from rich.table import Column, Table
 from rich.prompt import Prompt
@@ -234,7 +232,12 @@ if __name__ == "__main__":
     console.print("MADE BY [bold red]R0uteur / https://github.com/routeur/Pear[/bold red]")
     print("")
 
-    ASN = Prompt.ask("Entrez un numéro d'ASN", default="exemple : 174")
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-a", "--asn", type=int, help="Numéro d'ASN (exemple 174)")
+
+    parser_args = parser.parse_args()
+
+    ASN = parser_args.asn
 
     pdb_base = pdb_base_info_ASN(ASN)
     if(type(pdb_base) is str):
