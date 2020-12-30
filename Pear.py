@@ -1,6 +1,4 @@
-import requests
-import socket
-import json
+import requests, socket, json
 from rich.console import Console
 from rich.table import Column, Table
 from rich.prompt import Prompt
