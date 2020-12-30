@@ -5,7 +5,7 @@
 :us: **Pear is a script for gathering info from an ASNumber.**
 
 
-![image](https://user-images.githubusercontent.com/49996859/103335830-9321e300-4a76-11eb-924d-6e3a0fc226fd.png)
+![image](https://user-images.githubusercontent.com/49996859/103336250-d2046880-4a77-11eb-95e4-146ebf069cdd.png)
 
   
 ***:fr: Comment l'installer ?***  
@@ -109,11 +109,11 @@ The customer have a uplink to downlink relationship
 :us: ASN DEGREE TOTAL  
 >Total of ASN DEGREES
 
-:us: AS rank of CAIDA
->the AS rank is determined by the size of the AS and the degree of their cones
-
-:fr: AS rank de CAIDA
+:fr: AS rank de CAIDA  
 >l'AS rank de CAIDA est determiné par la taille de l'AS et le degré de leurs cones
+
+:us: AS rank of CAIDA
+>the AS rank is determined by the size of the AS and the degree of their cones  
 
 :fr: CONE  
 >traduction à venir.. cependant vous pouvez vous renseigner sur ce lien : https://asrank.caida.org/about#customer-cone  
@@ -122,5 +122,5 @@ The customer have a uplink to downlink relationship
 >translation incoming.. but you still can check this link : https://asrank.caida.org/about#customer-cone  
   
     
->If you want to suggest something about the code or the documentation feel free to tell me :)
+**If you want to suggest something about the code or the documentation feel free to tell me :) **
 
