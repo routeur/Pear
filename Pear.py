@@ -2,6 +2,7 @@ import requests, socket, json, argparse
 from rich.console import Console
 from rich.table import Column, Table
 from rich.prompt import Prompt
+import csv
 
 def pdb_base_info_ASN (ASN):
     url = f'https://peeringdb.com/api/net?asn={ASN}'
@@ -158,6 +159,16 @@ def caida_organisation_gathering (caida_org_id):
     return (caida_organization_name ,caida_organization_rank , caida_organization_numberasn, caida_organization_numberprefixes, caida_organization_numberadresses,
     caida_organization_node_asn)
 
+def export_CSV_ASN_PEER (ASN,File_name_peer_exp):
+    url = f'https://api.bgpview.io/asn/{ASN}/peers'
+    bgp_data_peers = requests.get(url)
+    data_peers = json.loads(bgp_data_peers.text)
+    with open(f'{File_name_peer_exp}.csv', 'w', newline='',encoding='utf8') as file:
+        writer = csv.writer(file)
+        for i in range (0,(len(data_peers['data']['ipv4_peers']))):
+            writer.writerow(["asn","name","description","country_code"])
+            writer.writerow([data_peers['data']['ipv4_peers'][i]['asn'],data_peers['data']['ipv4_peers'][i]['name'] , data_peers['data']['ipv4_peers'][i]['description'],data_peers['data']['ipv4_peers'][i]['country_code']])
+
 def initialisation_de_la_table_FAC(couleur):
     ########## initialisation de la table pour les FACILITIES ########
     table_fac = Table(show_header=True, header_style=couleur)
@@ -234,10 +245,11 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
     parser.add_argument("-a", "--asn", type=int, help="Numéro d'ASN (exemple 174)")
-
+    parser.add_argument("-e", "--export", type=str, help="File name")    
     parser_args = parser.parse_args()
 
     ASN = parser_args.asn
+    File_name_peer_exp = parser_args.export
 
     pdb_base = pdb_base_info_ASN(ASN)
     if(type(pdb_base) is str):
@@ -302,3 +314,8 @@ if __name__ == "__main__":
         console.print("                                                         [bold magenta] CAIDA RESULTS [/bold magenta]")
         console.print(table_CAIDA_AS_1)
         console.print(table_CAIDA_AS_2)
+
+    if type(File_name_peer_exp) == str:
+        export_CSV_ASN_PEER(ASN,File_name_peer_exp)
+    else:
+        pass
