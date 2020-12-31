@@ -165,8 +165,8 @@ def export_CSV_ASN_PEER (ASN,File_name_peer_exp):
     data_peers = json.loads(bgp_data_peers.text)
     with open(f'{File_name_peer_exp}.csv', 'w', newline='',encoding='utf8') as file:
         writer = csv.writer(file)
+        writer.writerow(["asn","name","description","country_code"])
         for i in range (0,(len(data_peers['data']['ipv4_peers']))):
-            writer.writerow(["asn","name","description","country_code"])
             writer.writerow([data_peers['data']['ipv4_peers'][i]['asn'],data_peers['data']['ipv4_peers'][i]['name'] , data_peers['data']['ipv4_peers'][i]['description'],data_peers['data']['ipv4_peers'][i]['country_code']])
 
 def initialisation_de_la_table_FAC(couleur):
