@@ -28,6 +28,12 @@ And :
 
 ```python3 Pear.py -a [ASNumber]```
   
+:fr: ***Si vous voulez utiliser l'option d'export en csv faites :***  
+:us: **If you want to use the csv export option do :**  
+  
+```python3 Pear.py -a [ASNumber] -e [SampleName]```
+  
+  
 Getting help :  
   
 ```python3 Pear.py -h```
@@ -122,5 +128,5 @@ The customer have a uplink to downlink relationship
 >translation incoming.. but you still can check this link : https://asrank.caida.org/about#customer-cone  
   
     
-**If you want to suggest something about the code or the documentation feel free to tell me :) **
+**If you want to suggest something about the code or the documentation feel free to tell me :)**
 
