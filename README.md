@@ -28,8 +28,8 @@ And :
 
 ```python3 Pear.py -a [ASNumber]```
   
-:fr: ***Si vous voulez utiliser l'option d'export en csv faites :***  
-:us: **If you want to use the csv export option do :**  
+:fr: ***Si vous voulez exporter la liste des peer en csv faites :***  
+:us: **If you want to export the peering list in csv do :**  
   
 ```python3 Pear.py -a [ASNumber] -e [SampleName]```
   
