@@ -165,9 +165,11 @@ def export_CSV_ASN_PEER (ASN,File_name_peer_exp):
     data_peers = json.loads(bgp_data_peers.text)
     with open(f'{File_name_peer_exp}.csv', 'w', newline='',encoding='utf8') as file:
         writer = csv.writer(file)
-        writer.writerow(["asn","name","description","country_code"])
+        writer.writerow(["asn","name","description","country_code","version IP peering"])
         for i in range (0,(len(data_peers['data']['ipv4_peers']))):
-            writer.writerow([data_peers['data']['ipv4_peers'][i]['asn'],data_peers['data']['ipv4_peers'][i]['name'] , data_peers['data']['ipv4_peers'][i]['description'],data_peers['data']['ipv4_peers'][i]['country_code']])
+            writer.writerow([data_peers['data']['ipv4_peers'][i]['asn'],data_peers['data']['ipv4_peers'][i]['name'] , data_peers['data']['ipv4_peers'][i]['description'],data_peers['data']['ipv4_peers'][i]['country_code'],'ipv4'])
+        for i in range (0,(len(data_peers['data']['ipv6_peers']))):
+            writer.writerow([data_peers['data']['ipv6_peers'][i]['asn'],data_peers['data']['ipv6_peers'][i]['name'] , data_peers['data']['ipv6_peers'][i]['description'],data_peers['data']['ipv6_peers'][i]['country_code'],'ipv6'])
 
 def initialisation_de_la_table_FAC(couleur):
     ########## initialisation de la table pour les FACILITIES ########
