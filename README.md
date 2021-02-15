@@ -63,7 +63,7 @@ Peeringdb is a non-profit organisation and maintained by volunteers.
 :us: ***KEYWORDS :***
 
 :fr: Network facilities:
->Network Facilities inclus tout ce qui est lié à l'infrastructure réseeau (inclus les cables, conduits, switches et autres équipements) ainsi que les Centres Opérations de réseau terrains et batiments associés
+>Network Facilities inclus tout ce qui est lié à l'infrastructure réseau (inclus les cables, conduits, switches et autres équipements) ainsi que les Centres Opérations de réseau terrains et batiments associés
 
 :us: Network facilities:
 >Network Facilities means all material network facilities (including cables, wires, conduits, switches etc..) and related material operating support systems, network operations centers land and buildings associated therewith
