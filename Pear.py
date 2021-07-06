@@ -193,7 +193,7 @@ def initialisation_de_la_table_NET_1(couleur):
     table_net_1.add_column("SCOPE", style="dim")
     table_net_1.add_column("POLICY GENERALE", style="dim")
 
-    return table_net_1 
+    return table_net_1
 
 def initialisation_de_la_table_NET_2(couleur):
     ########## initialisation de la table pour les NSP ########
@@ -238,6 +238,29 @@ def initialisation_de_la_table_CAIDA_ASgathering_2(couleur):
 
     return table_CAIDA_AS_2
 
+def get_ASN_global_data(asn):
+    pdb_base = pdb_base_info_ASN(asn)
+    if(type(pdb_base) is str):
+        return {"error" : pdb_base }
+    else:
+        other = pdb_other_infos(pdb_base[0])
+        network_facilities = pdbsearch_network_facilities(pdb_base[0])
+        by_asn = caida_search_by_asn(asn)
+        org_gathering = caida_organisation_gathering(by_asn[1])
+        other_info_pdb = pdb_other_infos(pdb_base[0])
+        net_org_gathering = pdbsearch_network_NET(pdb_base[0])
+        verification = verification_NET_or_FAC(pdb_base[0])
+        total = {
+            "base": pdb_base,
+            "by_asn" : by_asn,
+            "network_facilities" : network_facilities,
+            "org" : org_gathering,
+            "net_org" : net_org_gathering,
+            "other_info" : other_info_pdb,
+            "other" : other,
+            "verification" : verification,
+        }
+        return total
 
 if __name__ == "__main__":
     console = Console()
@@ -247,7 +270,7 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
     parser.add_argument("-a", "--asn", type=int, help="Numéro d'ASN (exemple 174)")
-    parser.add_argument("-e", "--export", type=str, help="File name")    
+    parser.add_argument("-e", "--export", type=str, help="File name")
     parser_args = parser.parse_args()
 
     ASN = parser_args.asn
