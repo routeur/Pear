@@ -18,7 +18,7 @@ def pdb_base_info_ASN (ASN, json=False):
     info_as_traffic = (pdb_json_as['data'][0]['info_traffic'])
     info_as_ratio = (pdb_json_as['data'][0]['info_ratio'])
     if(json):
-        return ('org_id' : org_as_id , 'as_id' : id_as, 'as_scope' : info_as_scope , 'as_type' : info_as_type, 'as_traffic' : info_as_traffic, 'as_ratio' : info_as_ratio)
+        return {'org_id' : org_as_id , 'as_id' : id_as, 'as_scope' : info_as_scope , 'as_type' : info_as_type, 'as_traffic' : info_as_traffic, 'as_ratio' : info_as_ratio}
     else:
         return (org_as_id ,id_as, info_as_scope , info_as_type, info_as_traffic,info_as_ratio)
 
@@ -31,7 +31,7 @@ def pdb_other_infos (org_as_id, json=False):
     pdb_org_website = (pdb_org_json['data'][0]['website'])
 
     if(json):
-        return ('created' : pdb_org_created, 'update' : pdb_org_updated, 'website' : pdb_org_website)
+        return {'created' : pdb_org_created, 'update' : pdb_org_updated, 'website' : pdb_org_website}
     else:
         return (pdb_org_created, pdb_org_updated, pdb_org_website)
 
@@ -67,7 +67,7 @@ def pdbsearch_network_facilities (org_as_id, json=False):
         pdb_net_count_inteconnect.append(fac_pdb_net_count)
 
     if(json):
-        return ('orgname_interco' : pdb_orgname_inteconnect, 'name_interco' : pdb_name_interconnect, 'city_interco' : pdb_city_interconnect, 'net_count_interco' : pdb_net_count_inteconnect, 'note_interco' : pdb_notes_interconnect)
+        return {'orgname_interco' : pdb_orgname_inteconnect, 'name_interco' : pdb_name_interconnect, 'city_interco' : pdb_city_interconnect, 'net_count_interco' : pdb_net_count_inteconnect, 'note_interco' : pdb_notes_interconnect}
     else:
         return (pdb_orgname_inteconnect, pdb_name_interconnect, pdb_city_interconnect, pdb_net_count_inteconnect, pdb_notes_interconnect)
 
@@ -116,7 +116,7 @@ def pdbsearch_network_NET(org_as_id, json=False):
         pdb_net_info_ratio_interconect.append(pdb_net_info_ratio)
         pdb_net_website_interconect.append(pdb_net_website)
     if(json):
-        return ('net_name' : pdb_net_name_interconect, 'net_id_interco' : pdb_net_id_interconect, 'net_asn_interco' : pdb_net_asn_interconect, 'net_info_traffic_interco' : pdb_net_info_traffic_interconect, 'net_info_type_interco' : pdb_net_info_type_interconect, 'net_info_scope_interco' : pdb_net_info_scope_interconect, 'net_policy_general_interco' : pdb_net_policy_general_interconect, 'net_policy_contracts_interco' : pdb_net_policy_contracts_interconect, 'net_irr_as_set_interco' : pdb_net_irr_as_set_interconect, 'net_info_ratio_interco' : pdb_net_info_ratio_interconect, 'net_notes_interco' : pdb_net_notes_interconect, 'net_website_interco' : pdb_net_website_interconect)
+        return {'net_name' : pdb_net_name_interconect, 'net_id_interco' : pdb_net_id_interconect, 'net_asn_interco' : pdb_net_asn_interconect, 'net_info_traffic_interco' : pdb_net_info_traffic_interconect, 'net_info_type_interco' : pdb_net_info_type_interconect, 'net_info_scope_interco' : pdb_net_info_scope_interconect, 'net_policy_general_interco' : pdb_net_policy_general_interconect, 'net_policy_contracts_interco' : pdb_net_policy_contracts_interconect, 'net_irr_as_set_interco' : pdb_net_irr_as_set_interconect, 'net_info_ratio_interco' : pdb_net_info_ratio_interconect, 'net_notes_interco' : pdb_net_notes_interconect, 'net_website_interco' : pdb_net_website_interconect}
     else:
         return (pdb_net_name_interconect, pdb_net_id_interconect, pdb_net_asn_interconect, pdb_net_info_traffic_interconect, pdb_net_info_type_interconect, pdb_net_info_scope_interconect, pdb_net_policy_general_interconect, pdb_net_policy_contracts_interconect, pdb_net_irr_as_set_interconect, pdb_net_info_ratio_interconect, pdb_net_notes_interconect, pdb_net_website_interconect)
 
@@ -150,7 +150,7 @@ def caida_search_by_asn (ASN, json=False):
     caida_asndegree_customer = (caida_asn['data']['asn']['asnDegree']['customer'])
     caida_asndegree_provider = (caida_asn['data']['asn']['asnDegree']['provider'])
     if(json):
-        return ('rank' : caida_rank, 'org_id' : caida_org_id, 'source' : caida_source, 'cone_prefixes' : caida_cone_prefixes, 'cone_addresses' : caida_cone_addresses, 'cone_asns' : caida_cone_asns, 'asndegree_total' : caida_asndegree_total, 'asndegree_peer' : caida_asndegree_peer, 'asndegree_customer' : caida_asndegree_customer, 'asndegree_provider' : caida_asndegree_provider)
+        return {'rank' : caida_rank, 'org_id' : caida_org_id, 'source' : caida_source, 'cone_prefixes' : caida_cone_prefixes, 'cone_addresses' : caida_cone_addresses, 'cone_asns' : caida_cone_asns, 'asndegree_total' : caida_asndegree_total, 'asndegree_peer' : caida_asndegree_peer, 'asndegree_customer' : caida_asndegree_customer, 'asndegree_provider' : caida_asndegree_provider}
     else:
         return (caida_rank, caida_org_id, caida_source, caida_cone_prefixes, caida_cone_addresses, caida_cone_asns, caida_asndegree_total, caida_asndegree_peer, caida_asndegree_customer, caida_asndegree_provider)
 
@@ -166,7 +166,7 @@ def caida_organisation_gathering (caida_org_id, json=False):
     caida_organization_node_asn = (caida_organization_id['data']['organization']['members']['asns']['edges'][0]['node']['asn'])
 
     if(json):
-        return ('organization_name' : caida_organization_name , 'organization_rank' : caida_organization_rank , 'organization_numberasn' : caida_organization_numberasn, 'organization_numberprefixes' : caida_organization_numberprefixes, 'organization_numberadresses' : caida_organization_numberadresses, 'organization_node_asn' : caida_organization_node_asn)
+        return {'organization_name' : caida_organization_name , 'organization_rank' : caida_organization_rank , 'organization_numberasn' : caida_organization_numberasn, 'organization_numberprefixes' : caida_organization_numberprefixes, 'organization_numberadresses' : caida_organization_numberadresses, 'organization_node_asn' : caida_organization_node_asn}
     else:
         return (caida_organization_name ,caida_organization_rank , caida_organization_numberasn, caida_organization_numberprefixes, caida_organization_numberadresses,caida_organization_node_asn)
 
