@@ -1,7 +1,7 @@
 #  :pear: Pear
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-***:fr: Pear est un script qui permet de recuperer des informations sur une AS.***  
+***:fr: Pear est un script qui permet de récupérer des informations sur une AS.***  
 :us: **Pear is a script for gathering info from an ASNumber.**
 
 
@@ -23,7 +23,7 @@ And :
 
 ```pip install -r requirement.txt```
 
-:fr: ***Comment le faire run ?***  
+:fr: ***Comment l'exécuter ?***  
 :us: **How to run it ?**  
 
 ```python3 Pear.py -a [ASNumber]```
@@ -43,7 +43,7 @@ Getting help :
 
 #### INTRODUCTION
 
-:fr: **Qu'est ce qu'un ASN ?**  
+:fr: **Qu'est-ce qu'un ASN ?**  
 >Un Autonomous System (AS), ou système autonome, est un ensemble de réseaux informatiques IP intégrés à Internet et dont la politique de routage interne est cohérente. Un AS est généralement sous le contrôle d'une entité ou organisation unique. (wikipedia)  
 Un AS s'engage generalement dans des accords de peering, la plus part des accords d'interconnexion sont tennus secrets mais certainnes de ces informations peuvent être déduites par des dérivés de traceroute et des dataset de topologie BGP.
 
@@ -51,15 +51,15 @@ Un AS s'engage generalement dans des accords de peering, la plus part des accord
 >An autonomous system (AS) is a collection of connected Internet Protocol (IP) routing prefixes under the control of one or more network operators on behalf of a single administrative entity or domain that presents a common, clearly defined routing policy to the internet (wikipedia)  
 An AS engage thmeself to some peering agreement, although most interconnection peering agreements between networks are secret but some information can be inferred from traceroute-derived and BGP-derived Internet topology data sets.
 
-:fr: **Qu'est ce que peeringdb ? :**  
->Peeringdb à été crée pour faciliter le peering entre les réseaux ainsi qu'entre les coordonnateurs de peering mais pas que, dans la base de donnée de peeringdb on peux retrouver des données d'interconnexions sur les réseaux , clouds , services et entreprises.
+:fr: **Qu'est-ce que peeringdb ? :**  
+>Peeringdb à été créé pour faciliter le peering entre les réseaux ainsi qu'entre les coordonnateurs de peering mais pas que, dans la base de donnée de peeringdb on peux retrouver des données d'interconnexions sur les réseaux , clouds , services et entreprises.
 Peeringdb est une organisation à but non lucrative et gerée par des benevoles.
 
 :us: **What is peeringdb ? :**  
 >PeeringDB was set up to facilitate peering between networks and peering coordinators and that includes all types of interconnection data for networks, clouds, services, and enterprise, as well as interconnection facilities.
 Peeringdb is a non-profit organisation and maintained by volunteers.  
 
-:fr: ***MOTS CLÉS :***  
+:fr: ***MOTS-CLÉS :***  
 :us: ***KEYWORDS :***
 
 :fr: Network facilities:
@@ -84,7 +84,7 @@ par de nombreuses organisations réseaux nationales ou internationales
 The IRR (Internet Routing Registry ou IRR) describe the records maintained by national or international network organizations
 
 :fr: DEGREE  
->Un DEGREE est le nombre de neighbors que possède un node ou un AS.   
+>Un DEGREE est le nombre de voisins que possède un node ou un AS.   
 Il y a plusieurs types de DEGREE : global, out, and transit.  
 ***-Entre autre, un global DEGREE est un DEGREE standard dans lequel tout les AS neighbors sont comptés***  
 -Out et transit DEGREE, toutefois, changent en fonction des chemins observés.  
@@ -101,7 +101,7 @@ see this link for more details (https://asrank.caida.org/about#rank)
 
 :fr: DEGREE CUSTOMER
 >Un customer achete du transit à un AS
-Peer to peer c'est un accord de peering entre les deux isp
+Peer to peer c'est un accord de peering entre les deux ISP
 Le customer à une relation de lien de montant à descendant 
 
 :us: DEGREE CUSTOMER
