@@ -259,7 +259,6 @@ def get_ASN_global_data(asn):
         network_facilities = pdbsearch_network_facilities(pdb_base['org_id'], pjson=True)
         by_asn = caida_search_by_asn(asn, pjson=True)
         org_gathering = caida_organisation_gathering(by_asn['org_id'], pjson=True)
-        other_info_pdb = pdb_other_infos(pdb_base['org_id'], pjson=True)
         net_org_gathering = pdbsearch_network_NET(pdb_base['org_id'], pjson=True)
         verification = verification_NET_or_FAC(pdb_base['org_id'])
         total = {
@@ -268,7 +267,6 @@ def get_ASN_global_data(asn):
             "network_facilities" : network_facilities,
             "org" : org_gathering,
             "net_org" : net_org_gathering,
-            "other_info" : other_info_pdb,
             "other" : other,
             "verification" : verification,
         }
